@@ -14,6 +14,8 @@
 		050E0FE11A8665F3006F4FF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 050E0FE01A8665F3006F4FF7 /* Images.xcassets */; };
 		050E0FE41A8665F3006F4FF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050E0FE21A8665F3006F4FF7 /* LaunchScreen.xib */; };
 		050E0FF01A8665F3006F4FF7 /* OlaChaloNikloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 050E0FEF1A8665F3006F4FF7 /* OlaChaloNikloTests.m */; };
+		050E0FFB1A86750B006F4FF7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050E0FFA1A86750B006F4FF7 /* HomeViewController.m */; };
+		E8B5012783A34EB897AFD012 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1576F3BAF384C4C8B8C46298 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,11 @@
 		050E0FE91A8665F3006F4FF7 /* OlaChaloNikloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OlaChaloNikloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		050E0FEE1A8665F3006F4FF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		050E0FEF1A8665F3006F4FF7 /* OlaChaloNikloTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OlaChaloNikloTests.m; sourceTree = "<group>"; };
+		050E0FF91A86750B006F4FF7 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		050E0FFA1A86750B006F4FF7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		1576F3BAF384C4C8B8C46298 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		75940897CCCE690E14381585 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B44F4CA48F6380112F24D7CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8B5012783A34EB897AFD012 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +74,8 @@
 				050E0FD21A8665F3006F4FF7 /* OlaChaloNiklo */,
 				050E0FEC1A8665F3006F4FF7 /* OlaChaloNikloTests */,
 				050E0FD11A8665F3006F4FF7 /* Products */,
+				8AA51C2B95D4279A3B837EC3 /* Pods */,
+				BAE3662217A512ACB68DEABF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +95,8 @@
 				050E0FD81A8665F3006F4FF7 /* AppDelegate.m */,
 				050E0FDA1A8665F3006F4FF7 /* ViewController.h */,
 				050E0FDB1A8665F3006F4FF7 /* ViewController.m */,
+				050E0FF91A86750B006F4FF7 /* HomeViewController.h */,
+				050E0FFA1A86750B006F4FF7 /* HomeViewController.m */,
 				050E0FDD1A8665F3006F4FF7 /* Main.storyboard */,
 				050E0FE01A8665F3006F4FF7 /* Images.xcassets */,
 				050E0FE21A8665F3006F4FF7 /* LaunchScreen.xib */,
@@ -119,6 +131,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8AA51C2B95D4279A3B837EC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B44F4CA48F6380112F24D7CF /* Pods.debug.xcconfig */,
+				75940897CCCE690E14381585 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BAE3662217A512ACB68DEABF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1576F3BAF384C4C8B8C46298 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 050E0FF31A8665F3006F4FF7 /* Build configuration list for PBXNativeTarget "OlaChaloNiklo" */;
 			buildPhases = (
+				B352FE01BA849C982E4305B0 /* Check Pods Manifest.lock */,
 				050E0FCC1A8665F3006F4FF7 /* Sources */,
 				050E0FCD1A8665F3006F4FF7 /* Frameworks */,
 				050E0FCE1A8665F3006F4FF7 /* Resources */,
+				71E3D2B99800E6F9C1F75D7A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,6 +245,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		71E3D2B99800E6F9C1F75D7A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B352FE01BA849C982E4305B0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		050E0FCC1A8665F3006F4FF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -222,6 +286,7 @@
 				050E0FDC1A8665F3006F4FF7 /* ViewController.m in Sources */,
 				050E0FD91A8665F3006F4FF7 /* AppDelegate.m in Sources */,
 				050E0FD61A8665F3006F4FF7 /* main.m in Sources */,
+				050E0FFB1A86750B006F4FF7 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +408,7 @@
 		};
 		050E0FF41A8665F3006F4FF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B44F4CA48F6380112F24D7CF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OlaChaloNiklo/Info.plist;
@@ -353,6 +419,7 @@
 		};
 		050E0FF51A8665F3006F4FF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75940897CCCE690E14381585 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OlaChaloNiklo/Info.plist;
@@ -414,6 +481,7 @@
 				050E0FF51A8665F3006F4FF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		050E0FF61A8665F3006F4FF7 /* Build configuration list for PBXNativeTarget "OlaChaloNikloTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +490,7 @@
 				050E0FF81A8665F3006F4FF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,13 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nRY-Tu-a9E">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="uaI-s3-gAk">
+            <objects>
+                <viewController id="nRY-Tu-a9E" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y62-px-1pP"/>
+                        <viewControllerLayoutGuide type="bottom" id="gWK-mE-KLF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FkR-CO-BtM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapScreenImage" translatesAutoresizingMaskIntoConstraints="NO" id="RCF-qC-xrX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnZ-sX-Z5P">
+                                <rect key="frame" x="16" y="28" width="36" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuButton:" destination="nRY-Tu-a9E" eventType="touchUpInside" id="MSg-9d-uKf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dim-uD-mPr">
+                                <rect key="frame" x="51" y="562" width="283" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="CONNECT WITH SOUNDCLOUD">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectWithSoundcloud:" destination="nRY-Tu-a9E" eventType="touchUpInside" id="UP5-pY-tua"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="soundcloud-icon" translatesAutoresizingMaskIntoConstraints="NO" id="66s-Vx-t8A">
+                                <rect key="frame" x="16" y="559" width="36" height="33"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RCF-qC-xrX" firstAttribute="leading" secondItem="FkR-CO-BtM" secondAttribute="leading" id="4v5-u4-vDW"/>
+                            <constraint firstItem="RCF-qC-xrX" firstAttribute="top" secondItem="FkR-CO-BtM" secondAttribute="top" id="723-jC-kK9"/>
+                            <constraint firstAttribute="trailing" secondItem="RCF-qC-xrX" secondAttribute="trailing" id="Ftw-YR-0Sn"/>
+                            <constraint firstItem="RCF-qC-xrX" firstAttribute="bottom" secondItem="gWK-mE-KLF" secondAttribute="top" id="XVx-eK-ywO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="homeImageView" destination="RCF-qC-xrX" id="dQ5-Ip-bZx"/>
+                        <outlet property="soundCloudButton" destination="Dim-uD-mPr" id="6ec-tD-fzu"/>
+                        <outlet property="soundCloundIcon" destination="66s-Vx-t8A" id="1jh-sA-Aww"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7r9-yZ-rN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="248"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +72,31 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtc-SR-bou">
+                                <rect key="frame" x="281" y="285" width="38" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rDK-6I-1kr"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wtc-SR-bou" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Jd-e8-bqF"/>
+                            <constraint firstItem="wtc-SR-bou" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="c3c-bq-EoO"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-91" y="374"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mapScreenImage" width="750" height="1334"/>
+        <image name="soundcloud-icon" width="256" height="256"/>
+    </resources>
 </document>

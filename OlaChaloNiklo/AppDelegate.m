@@ -7,12 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#import "SCUI.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
++ (void)initialize;
+{
+    [SCSoundCloud  setClientID:@"3176259fee7aa4008ed96ac98729eaab"
+                        secret:@"f68cce16b3b2c6b0b1edaaee63e6364b"
+                   redirectURL:[NSURL URLWithString:@"olachaloniklo://oauth"]];
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -40,6 +48,12 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    NSLog(@"%@",url);
+    return YES;
 }
 
 @end
